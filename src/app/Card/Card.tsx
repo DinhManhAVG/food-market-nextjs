@@ -7,8 +7,10 @@ import clsx from 'clsx';
 export default function Card() {
   const [ expanding , setExpanding ] = React.useState(false)
     return (
-        <div className={clsx('card', {
-          [custom.card]: expanding
-      })}>Card</div>
+      <div className={clsx('card', { [custom.card]: expanding})}
+        onClick={() => setExpanding(!expanding)}
+      >
+        Card
+      </div>
   )
 }
