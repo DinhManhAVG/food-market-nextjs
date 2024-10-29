@@ -1,9 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
-import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
+import Card from "@/app/Card";
 import Image from "next/image";
 
 export default function Home() {
@@ -27,18 +24,7 @@ export default function Home() {
             .
           </li>
           <li>Save and see your changes instantly.</li>
-          <Button className="m-5" variant={"outline"}>Click to test button</Button>
-          <Input className="m-5" type="email" placeholder="Email" />
-          <InputOTP className="m-5" maxLength={6} pattern={REGEXP_ONLY_DIGITS_AND_CHARS}>
-            <InputOTPGroup>
-              <InputOTPSlot index={0} />
-              <InputOTPSlot index={1} />
-              <InputOTPSlot index={2} />
-              <InputOTPSlot index={3} />
-              <InputOTPSlot index={4} />
-              <InputOTPSlot index={5} />
-            </InputOTPGroup>
-          </InputOTP>
+          <Card />
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
